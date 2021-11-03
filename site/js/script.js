@@ -1,43 +1,19 @@
-// Functions are First-Class Data Types
-// Functions ARE objects
-// function multiply(x, y) {
-//   return x * y;
-// }
-multiply.version = "v.1.0.0";
-console.log(multiply.version);
+// Function constructors
+function Circle (radius) {
+  this.radius = radius;
+}
 
-
-// Function factory
-function makeMultiplier(multiplier) {
-  var myFunc = function (x) {
-    return multiplier * x;
+Circle.prototype.getArea = 
+  function () {
+    return Math.PI * Math.pow(this.radius, 2);
   };
 
-  return myFunc;
-}
 
-var multiplyBy3 = makeMultiplier(3);
-console.log(multiplyBy3(10));
-var doubleAll = makeMultiplier(2);
-console.log(doubleAll(100));
+var myCircle = new Circle(10);
+console.log(myCircle.getArea());
 
-
-
-// Passing functions as arguments
-function doOperationOn(x, operation) {
-  return operation(x);
-}
-
-var result = doOperationOn(5, multiplyBy3);
-console.log(result);
-result = doOperationOn(100, doubleAll);
-console.log(result);
-
-
-
-
-
-
+var myOtherCircle = new Circle(20);
+console.log(myOtherCircle);
 
 
 
