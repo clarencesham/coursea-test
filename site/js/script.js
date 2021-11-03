@@ -1,8 +1,8 @@
 // Functions are First-Class Data Types
 // Functions ARE objects
-function multiply(x, y) {
-  return x * y;
-}
+// function multiply(x, y) {
+//   return x * y;
+// }
 multiply.version = "v.1.0.0";
 console.log(multiply.version);
 
