@@ -15,34 +15,31 @@ function sayHello () {
     .getElementById("content")
     .innerHTML = message;
 
-  if (name === "student") {
-    var title = 
-      document
-        .querySelector("#title")
-        .textContent;
-    title += " & Lovin' it!";
+  var title = 
     document
-        .querySelector("h1")
-        .textContent = title;
-  } else {
-    // var title = 
-    //   document
-    //     .querySelector("#title")
-    //     .textContent;
-    // title = "New title";
-    // document
-    //     .querySelector("h1")
-    //     .textContent = title;
-    var title = 
-      document
-        .querySelector("#title")
-        .textContent;
-    if (title.endswWth(" & Lovin' it!")) {
-      title = "Inside endsWith";
-      title = title.substring(0,title.length - 1);
-      document
-        .querySelector("h1")
-        .textContent = title;
-    }
+      .querySelector("#title")
+      .textContent;
+  var suffix = " & Lovin' it!";
+  console.log("Title is: " + title);
+  console.log("title.length: " + title.length);
+  console.log("title.endsWith: " + title.endsWith(suffix));
+  var truth = title.endsWith(suffix);
+  if (truth) {
+    console.log("Inside endsWith true loop. Title length is: " + title.length);
+    console.log("title.substring: " + title.substring(0,title.length - suffix.length));
+    title = title.substring(0,title.length - suffix.length);
+    console.log("Now, title is: " + title);
+    document
+      .querySelector("h1")
+      .textContent = title;
+  }
+
+  if (name === "student") {
+    console.log("Name is 'student'. Title is: " + title);
+    title += suffix;
+    console.log("Now, title is: " + title);
+    document
+      .querySelector("h1")
+      .textContent = title;
   }
 }
