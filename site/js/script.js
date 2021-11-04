@@ -39,7 +39,7 @@ function sayHello () {
         .textContent;
     if (title.endswWth(" & Lovin' it!")) {
       title = "Inside endsWith";
-      title = title.substring(0,title.length - 13);
+      title = title.substring(0,title.length - 1);
       document
         .querySelector("h1")
         .textContent = title;
