@@ -24,7 +24,6 @@ function sayHello () {
     document
         .querySelector("h1")
         .textContent = title;
-  }
   else {
     var title = 
       document
