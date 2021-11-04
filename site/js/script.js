@@ -1,20 +1,28 @@
-// Function constructors
-function Circle (radius) {
-  this.radius = radius;
+// DOM manipulation
+// console.log(document.getElementById("title"));
+// console.log(document instanceof HTMLDocument);
+
+function sayHello () {
+  var name =
+   document.getElementById("name").value;
+   var message = "<h2>Hello " + name + "!</h2>";
+
+  // document
+  //   .getElementById("content")
+  //   .textContent = message;
+
+  document
+    .getElementById("content")
+    .innerHTML = message;
+
+  if (name === "student") {
+    var title = 
+      document
+        .querySelector("#title")
+        .textContent;
+    title += " & Lovin' it!";
+    document
+        .querySelector("h1")
+        .textContent = title;
+  }
 }
-
-Circle.prototype.getArea = 
-  function () {
-    return Math.PI * Math.pow(this.radius, 2);
-  };
-
-
-var myCircle = new Circle(10);
-console.log(myCircle.getArea());
-
-var myOtherCircle = new Circle(20);
-console.log(myOtherCircle.getArea());
-
-
-
-
