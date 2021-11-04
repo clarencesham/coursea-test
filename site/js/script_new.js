@@ -24,5 +24,16 @@ function sayHello () {
     document
         .querySelector("h1")
         .textContent = title;
+  else {
+    var title = 
+      document
+        .querySelector("#title")
+        .textContent;
+    if title.indexof(" & Lovin' it!") {
+      title = title.substring(0,str.length - 13);
+      document
+        .querySelector("h1")
+        .textContent = title;
+    }
   }
 }
