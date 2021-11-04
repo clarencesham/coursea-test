@@ -24,24 +24,5 @@ function sayHello () {
     document
         .querySelector("h1")
         .textContent = title;
-  } else {
-    var title = 
-      document
-        .querySelector("#title")
-        .textContent;
-    title = "New title";
-    document
-        .querySelector("h1")
-        .textContent = title;
-    // var title = 
-    //   document
-    //     .querySelector("#title")
-    //     .textContent;
-    // if title.indexof(" & Lovin' it!") > 0 {
-    //   title = title.substring(0,str.length - 13);
-    //   document
-    //     .querySelector("h1")
-    //     .textContent = title;
-    // }
   }
 }
