@@ -24,12 +24,12 @@ function sayHello () {
     document
         .querySelector("h1")
         .textContent = title;
-  else {
+  } else {
     var title = 
       document
         .querySelector("#title")
         .textContent;
-    if title.indexof(" & Lovin' it!") {
+    if title.indexof(" & Lovin' it!") > 0 {
       title = title.substring(0,str.length - 13);
       document
         .querySelector("h1")
