@@ -37,9 +37,9 @@ function sayHello () {
       document
         .querySelector("#title")
         .textContent;
-    // if title.indexof(" & Lovin' it!") > 0 {
-      title = "Inside indexof";
-    //   title = title.substring(0,str.length - 13);
+    if (title.indexof(" & Lovin' it!") > 0) {
+    //   title = "Inside indexof";
+      title = title.substring(0,title.length - 13);
       document
         .querySelector("h1")
         .textContent = title;
